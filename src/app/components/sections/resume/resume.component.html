@@ -1,0 +1,47 @@
+<section class="resume w-full px-6 md:px-12 py-20">
+    <div class="text-center mb-[80px]">
+        <div class="flex flex-col relative items-center">
+            <span class="text-[50px] font-bold text-white">My Resume</span>
+            <span class="big-resume text-[7vw] font-bold text-[#7f7f7f] absolute opacity-15 -z-10">
+                Resume
+            </span>
+        </div>
+        <p class="text-lg text-[#7f7f7f] mt-4">
+            A journey of learning, growth, and achievements – shaping expertise one step at a time.
+        </p>
+    </div>
+
+    <div class="card flex flex-wrap gap-6 justify-center">
+        <ng-container *ngIf="resumes.length > 0; else noData">
+            <div *ngFor="let resume of resumes; let i = index" class="bg-[#161616] p-[30px] rounded-lg shadow-lg w-[48%] min-w-[300px]">
+                <p class="text-[#ffbd39] font-black text-[26px]">{{ resume.year }}</p>
+                <h2 class="text-[26px] text-white mt-4">{{ resume.title }}</h2>
+                <p class="text-sm text-[#7f7f7f] font-semibold mt-4 tracking-[3px]">
+                    {{ resume.institution || resume.company }}
+                </p>
+                
+                <!-- Başlanğıcda qısa, açıldıqda tam mətn -->
+                <p class="text-[#7f7f7f] mt-6 text-[16px] font-medium">
+                    {{ resume.expanded ? resume.description : (resume.description | slice:0:80) + '...' }}
+                </p>
+
+                <!-- Show More / Show Less düyməsi -->
+                <button (click)="toggleExpand(i)" class="mt-4 text-[#ffbd39] font-semibold text-sm cursor-pointer">
+                    {{ resume.expanded ? 'Show Less' : 'Show More' }}
+                </button>
+            </div>
+        </ng-container>
+
+        <ng-template #noData>
+            <p class="text-[#7f7f7f] mt-4 text-center">No resume data available.</p>
+        </ng-template>
+    </div>
+
+    <div class="flex justify-center mt-12">
+        <button class="bg-[#ffbd39] text-black text-[12px] tracking-[2px] px-8 py-6 rounded-full font-semibold mt-6 hover:bg-yellow-400 transition cursor-pointer uppercase">
+            <a href="assets/files/Ravan-Ismayilov-CV.pdf" download >
+                Download CV
+            </a>
+        </button>
+    </div>
+</section>

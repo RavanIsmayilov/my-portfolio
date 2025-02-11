@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+    .contact .grid {
+        grid-template-columns: 1fr;
+    }
+    .contact img {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+    .contact form {
+        width: 100%;
+    }
+    .big-contact{
+        display: none;
+    }
+    .profile-picture{
+        display: none;
+    }
+}
+
+.contact button:hover {
+    transform: scale(1.05);
+}
+
+.contact input,
+.contact textarea {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #ffbd39;
+    box-shadow: 0 0 10px rgba(255, 189, 57, 0.5);
+}
+
+

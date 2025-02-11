@@ -1,0 +1,52 @@
+<section
+    class="hero flex flex-col items-center text-center md:text-left md:flex-row-reverse md:items-start justify-between w-full md:px-12 pt-50 relative"
+    >
+    <div class="hero-image max-w-md">
+        <img
+        src="../../../../assets/images/Ravan-image2.png"
+        alt="Ravan Ismayilov"
+        class="hidden md:block w-[550px] h-[700px] object-cover absolute top-[10%] right-[5%] md:top-[15%] md:right-[10%] lg:right-[5%]"
+        />
+    </div>
+
+    <div class="hero-content max-w-lg">
+        <p class="text-[#FFBD39] font-semibold mb-2 uppercase tracking-[2px]">
+        HELLO!
+        </p>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+        I'm
+        <span
+            class="text-[#FFBD39]"
+            *ngFor="let char of ravan; let i = index"
+            [ngStyle]="getStyle(i)"
+            >{{ char }}</span
+        >
+        <br />
+        <span
+            class="text-[#FFBD39]"
+            *ngFor="let char of ismayilov; let i = index"
+            [ngStyle]="getStyle(i + ravan.length)"
+            >{{ char }}</span
+        >
+        </h1>
+        <p class="text-[30px] mt-4">
+        <span
+            *ngFor="let char of frontend; let i = index"
+            [ngStyle]="getStyle(i + ravan.length + ismayilov.length)"
+            >{{ char }}</span
+        >
+        </p>
+        <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+        <button
+            class="bg-yellow-500 text-black text-[12px] tracking-[1px] px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition cursor-pointer"
+        >
+            <a href="#contact">HIRE ME</a>
+        </button>
+        <button
+            class="border border-white px-6 py-3 text-[12px] tracking-[1px] rounded-full font-semibold hover:bg-white hover:text-black transition cursor-pointer"
+        >
+            <a href="#projects">MY WORKS</a>
+        </button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,59 @@
+.about {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.about-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+.about-image img {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 1s ease-in-out forwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: row;
+        text-align: left;
+        align-items: start;
+    }
+
+    .about-content {
+        text-align: left;
+    }
+
+    .about-image img {
+        display: none;
+    }
+    
+    .big-about {
+        display: none;
+    }
+}

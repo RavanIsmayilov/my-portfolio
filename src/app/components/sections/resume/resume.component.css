@@ -1,0 +1,32 @@
+.resume {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.resume div {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .card div{
+        width: 100%;
+    }
+
+    .big-resume{
+        display: none;
+    }
+}

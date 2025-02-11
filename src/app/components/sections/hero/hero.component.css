@@ -1,0 +1,57 @@
+.hero {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+.hero-content button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content button {
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-content button:hover {
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row-reverse;
+        text-align: left;
+        align-items: start;
+    }
+
+    .hero-content {
+        max-width: 600px;
+        text-align: left;
+    }
+
+    .hero-image {
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,26 @@
+.service-card {
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.service-card:hover {
+    background-color: #ffbd39;
+    transform: translateY(-5px);
+}
+
+.service-card:hover h3 {
+    color: black;
+}
+
+.service-card:hover .service-icon {
+    filter: brightness(0);
+}
+
+.service-card:hover div {
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .big-services{
+        display: none;
+    }
+}

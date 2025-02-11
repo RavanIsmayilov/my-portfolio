@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/fonts/fonts.css";
+@import "tailwindcss";
+@import "./assets/icons/flaticon/flaticon.css";
+@import "./assets/icons/icomoon/icomoon.css";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    section {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    header {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

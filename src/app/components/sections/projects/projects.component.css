@@ -1,0 +1,25 @@
+.group-hover .absolute {
+    transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .projects .grid div {
+        min-height: 200px;
+    }
+
+    .big-projects{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .projects .grid div {
+        min-height: 250px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .projects .grid div {
+        min-height: 300px;
+    }
+}

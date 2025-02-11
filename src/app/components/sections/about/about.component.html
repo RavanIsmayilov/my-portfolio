@@ -1,0 +1,38 @@
+<section
+    class="about flex flex-col md:flex-row items-center justify-start md:justify-between w-full px-6 md:px-12 py-20 pt-50 md:pt-100"
+    >
+    <div class="about-image max-w-md">
+        <img
+        src="../../../../assets/images/Ravan-image-removebg-copy.png"
+        alt="Ravan Ismayilov"
+        class="w-full h-auto object-cover"
+        />
+    </div>
+
+    <div class="about-content w-full max-w-lg">
+        <div class="flex flex-col items-start relative">
+        <span class="text-[50px] font-black text-white">About Me</span>
+        <span
+            class="big-about text-[7vw] font-extrabold text-[#b4b4b4] opacity-15 absolute -z-1 left-0 top-0"
+        >
+            About
+        </span>
+        </div>
+
+        <div [innerHTML]="aboutContent" class="mt-8 space-y-4 text-[16px] text-[#7f7f7f] font-medium"></div>
+        
+
+        <div class="mt-6 flex items-center gap-4">
+        <p class="text-2xl font-bold text-[#ffbd39]">50</p>
+        <p class="text-white text-lg">Projects complete</p>
+        </div>
+
+        <button
+        class="bg-[#ffbd39] text-black text-[12px] tracking-[2px] px-6 py-3 rounded-full font-semibold mt-6 hover:bg-yellow-400 transition cursor-pointer uppercase"
+        >
+        <a href="assets/files/Ravan-Ismayilov-CV.pdf" download >
+            Download CV
+        </a>
+        </button>
+    </div>
+</section>

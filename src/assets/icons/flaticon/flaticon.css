@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("/assets/icons/flaticon/Flaticon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-size: 60px;
+  font-style: normal;
+}
+
+.flaticon-ideas:before { content: "\f100"; }
+.flaticon-flasks:before { content: "\f101"; }
+.flaticon-analysis:before { content: "\f102"; }
+.flaticon-ux-design:before { content: "\f103"; }
+.flaticon-web-design:before { content: "\f104"; }
+.flaticon-idea:before { content: "\f105"; }
+.flaticon-innovation:before { content: "\f106"; }
+
+
+
+

@@ -1,0 +1,41 @@
+<section class="projects w-full px-6 sm:px-6 md:px-12 py-20">
+    <div class="text-center mb-18">
+        <div class="flex flex-col relative items-center">
+        <span class="text-[50px] sm:text-[50px] font-bold text-white"
+            >My Projects</span
+        >
+        <span
+            class="big-projects text-[7vw] font-bold text-[#7f7f7f] absolute opacity-15 -z-10"
+        >
+            Projects
+        </span>
+        </div>
+        <p class="text-base sm:text-lg text-[#7f7f7f] mt-4">
+            Every project is a story of passion, creativity, and problem-solving.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a
+        *ngFor="let project of projects"
+        [href]="project.link"
+        target="_blank"
+        class="relative group overflow-hidden cursor-pointer block"
+        >
+        <img
+            [src]="project.image"
+            alt="Project Image"
+            class="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+        />
+
+        <div
+            class="absolute inset-0 bg-[#ffbd39] opacity-0 group-hover:opacity-90 flex flex-col items-center justify-center transition-opacity duration-300"
+        >
+            <p class="text-white font-bold text-lg">{{ project.title }}</p>
+            <span class="text-white text-sm uppercase mt-1">{{
+            project.category
+            }}</span>
+        </div>
+        </a>
+    </div>
+</section>
