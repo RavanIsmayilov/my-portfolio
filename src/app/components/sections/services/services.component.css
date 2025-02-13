@@ -11,6 +11,14 @@
     color: black;
 }
 
+.service-card:hover i {
+    color: #fff;
+}
+
+.service-card i {
+    color: #ffbd39;
+}
+
 .service-card:hover .service-icon {
     filter: brightness(0);
 }

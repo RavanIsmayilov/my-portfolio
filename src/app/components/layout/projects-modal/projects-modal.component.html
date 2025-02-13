@@ -1,0 +1,35 @@
+<div
+    *ngIf="project"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+    (click)="closeModal()"
+>
+    <div
+        class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative"
+        (click)="$event.stopPropagation()"
+    >
+        <button class="absolute top-2 right-2 text-[20px] text-black cursor-pointer" (click)="closeModal()">✖</button>
+
+        <img [src]="project.image" class="w-full h-48 object-cover rounded-md" />
+
+        <h2 class="text-xl font-bold mt-4 text-[#ffbd39]">{{ project.title }}</h2>
+
+        <p class="text-gray-700 text-[16px] mt-2">{{ project.description }}</p>
+
+        <div class="mt-4">
+            <h3 class="font-semibold">Technologies Used:</h3>
+            <div class="flex flex-wrap gap-2 mt-2">
+                <span *ngFor="let tech of project.technologies"
+                    class="bg-gray-200 text-gray-700 text-[16px] px-3 py-1 rounded-md"
+                >
+                    {{ tech }}
+                </span>
+            </div>
+        </div>
+
+        <a [href]="project.link" target="_blank"
+            class="bg-[#ffbd39] text-white font-semibold py-2 px-4 rounded-lg inline-block mt-4 transition-all duration-300 hover:bg-yellow-500 text-[16px]"
+        >
+            View Project
+        </a>
+    </div>
+</div>
