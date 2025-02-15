@@ -1,8 +1,13 @@
 const fs = require('fs');
+const path = './src/environments';
+
+if (!fs.existsSync(path)) {
+    fs.mkdirSync(path, { recursive: true });
+}
+
 const envFile = `export const environment = {
-    production: true,
-    apiUrl: '${process.env.API_URL}'
+  production: true,
+  apiUrl: '${process.env.API_URL}'
 };`;
 
-fs.writeFileSync('./src/environments/environment.prod.ts', envFile);
-console.log('✅ environment.prod.ts created successfully!');
+fs.writeFileSync(`${path}/environment.prod.ts`, envFile);
