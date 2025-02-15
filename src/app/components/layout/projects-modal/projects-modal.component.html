@@ -7,9 +7,9 @@
         class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative"
         (click)="$event.stopPropagation()"
     >
-        <button class="absolute top-2 right-2 text-[20px] text-black cursor-pointer" (click)="closeModal()">✖</button>
+        <button class="absolute top-2 right-2 text-[20px] text-black cursor-pointer hover:text-red-700 transition-all" (click)="closeModal()">✖</button>
 
-        <img [src]="project.image" class="w-full h-48 object-cover rounded-md" />
+        <img [src]="project.image" class="w-full h-[250px] object-cover rounded-md" />
 
         <h2 class="text-xl font-bold mt-4 text-[#ffbd39]">{{ project.title }}</h2>
 

@@ -20,12 +20,10 @@
                     {{ resume.institution || resume.company }}
                 </p>
                 
-                <!-- Başlanğıcda qısa, açıldıqda tam mətn -->
                 <p class="text-[#7f7f7f] mt-6 text-[16px] font-medium">
                     {{ resume.expanded ? resume.description : (resume.description | slice:0:80) + '...' }}
                 </p>
 
-                <!-- Show More / Show Less düyməsi -->
                 <button (click)="toggleExpand(i)" class="mt-4 text-[#ffbd39] font-semibold text-sm cursor-pointer">
                     {{ resume.expanded ? 'Show Less' : 'Show More' }}
                 </button>
