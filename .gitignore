@@ -41,11 +41,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Angular environment files
-src/environments/environment.ts
-src/environments/environment.prod.ts
-
-#images
-src/assets/images
 
 
